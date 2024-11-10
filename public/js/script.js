@@ -7,7 +7,7 @@ const cart = JSON.parse(storedCart) || []
 const data = [
   {
     "id": 0,
-    "image": "public/images/image-baklava-desktop.jpg",
+    "image": "images/image-baklava-desktop.jpg",
     "name": "Spaghetti Carbonara",
     "description": "Creamy, rich pasta",
     "price": 12.99,
@@ -15,7 +15,7 @@ const data = [
   },
   {
     "id": 1,
-    "image": "public/images/image-brownie-desktop.jpg",
+    "image": "images/image-brownie-desktop.jpg",
     "name": "Cheeseburger Deluxe",
     "description": "Juicy beef patty",
     "price": 9.49,
@@ -23,7 +23,7 @@ const data = [
   },
   {
     "id": 2,
-    "image": "public/images/image-cake-desktop.jpg",
+    "image": "images/image-cake-desktop.jpg",
     "name": "Chicken Caesar Salad",
     "description": "Crisp, fresh greens",
     "price": 8.99,
@@ -31,7 +31,7 @@ const data = [
   },
   {
     "id": 3,
-    "image": "public/images/image-creme-brulee-desktop.jpg",
+    "image": "images/image-creme-brulee-desktop.jpg",
     "name": "Margarita Pizza",
     "description": "Classic, thin crust",
     "price": 10.75,
@@ -39,7 +39,7 @@ const data = [
   },
   {
     "id": 4,
-    "image": "public/images/image-macaron-desktop.jpg",
+    "image": "images/image-macaron-desktop.jpg",
     "name": "Sushi Platter",
     "description": "Fresh, assorted sushi",
     "price": 18.50,
@@ -47,7 +47,7 @@ const data = [
   },
   {
     "id": 5,
-    "image": "public/images/image-meringue-desktop.jpg",
+    "image": "images/image-meringue-desktop.jpg",
     "name": "Beef Tacos",
     "description": "Spicy, flavorful filling",
     "price": 7.99,
@@ -55,7 +55,7 @@ const data = [
   },
   {
     "id": 6,
-    "image": "public/images/image-panna-cotta-desktop.jpg",
+    "image": "images/image-panna-cotta-desktop.jpg",
     "name": "Pancake Stack",
     "description": "Fluffy, buttery pancakes",
     "price": 6.49,
@@ -63,7 +63,7 @@ const data = [
   },
   {
     "id": 7,
-    "image": "public/images/image-tiramisu-desktop.jpg",
+    "image": "images/image-tiramisu-desktop.jpg",
     "name": "Avocado Toast",
     "description": "Creamy, wholesome meal",
     "price": 5.99,
@@ -71,7 +71,7 @@ const data = [
   },
   {
     "id": 8,
-    "image": "public/images/image-waffle-desktop.jpg",
+    "image": "images/image-waffle-desktop.jpg",
     "name": "Chocolate Brownie",
     "description": "Rich, fudgy dessert",
     "price": 4.25,
@@ -88,13 +88,13 @@ data.forEach(product => {
     <figure class="figure">
       <img class="img" src=${product.image} alt=${product.name}>
       <div class="cartButton">
-        <img alt="add-to-cart" src="public/images/icon-add-to-cart.svg">
+        <img alt="add-to-cart" src="images/icon-add-to-cart.svg">
         <p>Add to cart</p>
       </div>
       <div class="cartButton active">
-        <img src="public/images/icon-decrement-quantity.svg" alt="icon-decrement-quantity" class="decrementButton">
+        <img src="images/icon-decrement-quantity.svg" alt="icon-decrement-quantity" class="decrementButton">
         <p class="quantity">1</p>
-        <img src="public/images/icon-increment-quantity.svg" alt="icon-increment-quantity" class="incrementButton">
+        <img src="images/icon-increment-quantity.svg" alt="icon-increment-quantity" class="incrementButton">
       </div>
     </figure>
     <div class="textContainer">
