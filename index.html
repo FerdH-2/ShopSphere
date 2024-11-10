@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+  <link rel="stylesheet" href="public/css/style.css">
+  <title>ShopSphere</title>
+</head>
+
+<body>
+  <section>
+    <header class="heading">
+      <h1>Desserts</h1>
+      <h1>Your carts (<span class="heading_length">0</span>)</h1>
+    </header>
+
+    <section class="container">
+      <main class="main-content"> </main>
+
+      <section class="sidebar">
+        <div class="nocart">
+          <img src="public/images/illustration-empty-cart.svg" alt="illustration-empty-cart">
+          <p>Items added to cart will appear here</p>
+        </div>
+        <div class="sidebar-content"></div>
+      </section>
+
+      <section class="modal">
+        <div class="modalx2">
+          <div class="modal-content">
+            <header>
+              <img src="public/images/icon-order-confirmed.svg" alt="order">
+              <p>Order Confirmed</p>
+              <p>We hope you enjoy your food</p>
+              <img src="public/images/icon-carbon-neutral.svg" alt="cancel" title="cancel" class="cancel">
+            </header>
+            <div class="orderCard">
+              <article class="items"></article>
+              <article class="orderTotal">
+                <p>Order Total</p>
+                <p class="overallTotal"></p>
+              </article>
+            </div>
+            <form id="orderForm">
+              <article>
+                <label for="username">Name</label>
+                <input type="text" name="user_name" placeholder="Your name..." id="username" required>
+              </article>
+              <article>
+                <label for="wnumber">What'sApp number</label>
+                <input type="number" name="user_wa_number" id="wnumber" placeholder="e.g 07045269229">
+              </article>
+              <article>
+                <label for="pnumber">Phone number</label>
+                <input type="number" name="user_number" id="pnumber" placeholder="e.g 07045269229">
+              </article>
+              <article>
+                <label for="email">Email</label>
+                <input type="email" name="user_email" id="email" placeholder="e.g youremail@gmail.com">
+              </article>
+              <input type="hidden" name="cart_array" id="cartArray">
+              <button type="submit" class="submit">Start New Order</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script src="public/js/script.js"></script>
+</body>
+
+</html>

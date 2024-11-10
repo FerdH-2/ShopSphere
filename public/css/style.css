@@ -1,0 +1,431 @@
+@font-face {
+    font-family: 'customFont';
+    src: url('../fonts/RedHatText-VariableFont_wght.ttf');
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translateY(15px);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+:root {
+    --red: hsl(14, 86%, 42%);
+    --green: hsl(159, 69%, 38%);
+    --rose-50: hsl(159, 69%, 38%);
+    --rose-100: hsl(13, 31%, 94%);
+    --rose-300: hsl(7, 20%, 60%);
+    --rose-500: hsl(14, 25%, 72%);
+    --rose-900: hsl(14, 65%, 9%);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'customFont';
+    position: relative;
+}
+
+section {
+    width: 100%;
+    background-color: var(--rose-100);
+    padding: 10px 0px;
+    height: auto;
+    min-height: 100vh;
+    animation: fade-in 0.4s ease-in-out;
+}
+
+section .heading {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+section .heading h1:nth-child(1) {
+    width: 70%;
+    color: var(--rose-900);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+section .heading h1:nth-child(2) {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--red)
+}
+
+/* CARDS */
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.container .main-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.main-content .card {
+    width: 250px;
+}
+
+.main-content .card .figure {
+    position: relative;
+    width: 100%;
+}
+
+.main-content .card .figure .img {
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.main-content .card .figure .cartButton {
+    display: flex;
+    width: 140px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    gap: 10px;
+    border: 1px solid var(--red);
+    color: var(--rose-900);
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -15px;
+    transform: translateX(50%);
+    background-color: var(--rose-100);
+    cursor: pointer;
+    right: 50%;
+}
+
+.main-content .card .figure .cartButton img {
+    width: 15px;
+}
+
+.main-content .card .textContainer {
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+.main-content .card .textContainer p:nth-child(1) {
+    font-size: 17px;
+    color: var(--rose-900);
+    font-weight: lighter;
+}
+
+.main-content .card .textContainer p:nth-child(2) {
+    font-size: 20px;
+    color: var(--rose-900);
+    font-weight: 600;
+}
+
+.main-content .card .textContainer p:nth-child(3) {
+    font-size: 15px;
+    color: var(--red);
+    font-weight: 500;
+}
+
+
+/* ACTIVE STATES */
+.main-content .card .figure .cartButton.active {
+    width: 140px;
+    transform: translateX(50%);
+    right: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+    background-color: var(--red);
+    cursor: default;
+}
+
+.main-content .card .figure .cartButton.active :is(.incrementButton, .decrementButton) {
+    cursor: pointer;
+    width: 17%;
+}
+
+.main-content .card .figure .cartButton.active p {
+    font-weight: 600;
+    color: var(--rose-100);
+}
+
+
+
+/* SIDEBAR */
+.sidebar {
+    width: 30%;
+    padding: 0px 10px;
+}
+
+.sidebar-content {
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    min-height: 400px;
+    max-height: 75vh;
+    overflow-y: scroll;
+}
+
+/* .sidebar-content::-webkit-scrollbar {
+    width: 12px;
+} */
+
+/* .sidebar-content::-webkit-scrollbar {
+    background-color: var(--green);
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+}
+
+.sidebar-content::-webkit-scrollbar-button {
+    display: none;
+} */
+
+.sidebar-content .sidebar-card .side-img {
+    margin: 20px 0px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.sidebar-content .sidebar-card .side-name {
+    font-size: 13px;
+}
+
+.hr {
+    margin-top: 10px;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.sidebar-content .sidebar-card button {
+    padding: 10px 15px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--red);
+    color: var(--rose-100);
+    border: none;
+    cursor: pointer;
+}
+
+/* NO CART  */
+.nocart img {
+    width: 100%;
+    height: 100%;
+}
+
+.nocart p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* CONFIRM ORDER */
+.CO {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--rose-100);
+    background-color: var(--rose-50);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* MODAL */
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(0.5);
+}
+
+.modalx2 {
+    width: 100%;
+    height: 100vh;
+    position: static;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content {
+    width: 500px;
+    background-color: var(--rose-100);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.modal .modal-content header {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.modal .modal-content header p:nth-child(2) {
+    font-size: 25px;
+    color: var(--rose-900);
+    margin: 10px 0px;
+    font-weight: bolder;
+}
+
+.modal .modal-content header p:nth-child(3) {
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.orderCard {
+
+}
+
+.orderCard .items {
+    display: flex;
+    padding: 0px 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    flex-direction: column;
+}
+
+.orderCard .item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.orderCard .item .header img {
+    width: 100px;
+    object-fit: contain;
+}
+
+.orderCard .item .header {
+    display: flex;
+    gap: 20px;
+}
+
+.orderCard .item .header .itemContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.orderCard .orderTotal {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+form article {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form article label {
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--red);
+}
+
+form article input {
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--red);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: var(--red);
+}
+
+form article input::placeholder {
+    font-size: 12px;
+    font-weight: lighter;
+    padding-left: 10px;
+    color: white;
+}
+
+form article input:focus {
+    background-color: var(--rose-300);
+}
+
+.submit {
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--rose-100);
+    font-weight: bolder;
+    font-size: 12px;
+    background-color: var(--green);
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.submit:hover {
+    background-color: var(--red);
+}
+
+.cancel {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+}
+
+.quan {
+    color: var(--red);
+    font-weight: 500;
+}
