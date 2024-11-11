@@ -296,5 +296,7 @@ form.addEventListener("submit", function (event) {
 
   document.querySelector(".modal").style.display = "none"
   document.querySelector(".modal").style.zIndex = 10
+  window.location.reload()
   localStorage.clear();
+  cart = []
 });
