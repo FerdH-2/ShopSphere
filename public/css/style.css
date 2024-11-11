@@ -307,9 +307,7 @@ section .heading h1:nth-child(2) {
     margin-bottom: 20px;
 }
 
-.orderCard {
-
-}
+.orderCard {}
 
 .orderCard .items {
     display: flex;
@@ -428,4 +426,431 @@ form article input:focus {
 .quan {
     color: var(--red);
     font-weight: 500;
+    padding-right: 10px;
+}
+
+/* MEDIA */
+
+@media screen AND (max-width: 700px) {
+    .sidebar-content .sidebar-card p:nth-child(2) {
+        font-size: 10px;
+        font-weight: bolder;
+    }
+
+    .sidebar-content .sidebar-card :is(p:nth-child(3), p:nth-child(4)) {
+        font-size: 11px;
+        font-weight: 300;
+    }
+
+    .sidebar-content .sidebar-card .total {
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .sidebar-content .sidebar-card button {
+        padding: 5px;
+        font-size: 10px;
+        font-weight: 900;
+        color: var(--rose-100);
+    }
+
+    .CO {
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--rose-100);
+        padding: 10px 15px;
+    }
+}
+
+@media screen AND (max-width: 696px) {
+    .container .main-content {
+        width: 70%;
+    }
+
+    .main-content .card {
+        width: 70%;
+    }
+}
+
+@media screen AND (max-width: 550px) {
+    .modal .modal-content {
+        width: 450px;
+    }
+
+    .orderCard .item .header .itemContents p {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .quan {
+        font-size: 13px;
+        font-weight: 900;
+    }
+
+    .orderCard .item .header .itemContents div span {
+        font-size: 14px;
+        font-weight: bolder;
+    }
+
+    .totalOrderPrice {
+        font-weight: bolder;
+    }
+}
+
+@media screen AND (max-width: 480px) {
+    .modal .modal-content {
+        width: 400px;
+    }
+}
+
+@media screen AND (max-width: 425px) {
+    .modal .modal-content {
+        width: 350px;
+    }
+
+    .modal .modal-content header p:nth-child(2) {
+        font-size: 20px;
+    }
+
+    .modal .modal-content header p:nth-child(3) {
+        font-size: 16px;
+    }
+
+    .orderCard .item .header img {
+        width: 70px;
+    }
+
+    .orderCard .item .header .itemContents p {
+        font-size: 12px;
+    }
+
+    .totalOrderPrice {
+        font-size: 11px;
+    }
+
+    .orderCard .item .header .itemContents div span {
+        font-size: 11px;
+    }
+
+    .orderCard .orderTotal p:nth-child(1) {
+        font-size: 14px;
+    }
+
+    .orderCard .orderTotal p:nth-child(2) {
+        font-size: 15px;
+    }
+
+    form article label {
+        font-size: 13px;
+    }
+}
+
+@media screen AND (max-width: 400px) {
+    .modal .modal-content {
+        width: 300px;
+    }
+
+    .modal .modal-content header p:nth-child(2) {
+        font-size: 15px;
+        margin-bottom: 5px
+    }
+
+    .modal .modal-content header p:nth-child(3) {
+        font-size: 12px;
+    }
+
+    .modal .modal-content header img:nth-child(1) {
+        width: 14%;
+    }
+
+    .cancel {
+        width: 6%;
+    }
+
+    .orderCard .item .header img {
+        width: 50px;
+    }
+
+    .orderCard .item .header .itemContents p {
+        font-size: 9px;
+    }
+
+    .totalOrderPrice {
+        font-size: 10px;
+    }
+
+    .orderCard .item .header .itemContents div span {
+        font-size: 10px;
+    }
+
+    .orderCard .orderTotal p:nth-child(1) {
+        font-size: 12px;
+    }
+
+    .orderCard .orderTotal p:nth-child(2) {
+        font-size: 13px;
+    }
+
+    form article label {
+        font-size: 11px;
+    }
+
+    .orderCard .item .header {
+        gap: 10px;
+    }
+}
+
+@media screen AND (max-width: 325px) {
+    .modal .modal-content {
+        width: 250px;
+    }
+
+    .modal .modal-content header p:nth-child(2) {
+        font-size: 12px;
+        margin-bottom: 3px
+    }
+
+    .modal .modal-content header p:nth-child(3) {
+        font-size: 11px;
+    }
+
+    .modal .modal-content header img:nth-child(1) {
+        width: 12%;
+    }
+
+    .cancel {
+        width: 6%;
+    }
+
+    .orderCard .item .header img {
+        width: 40px;
+    }
+
+    .orderCard .item .header .itemContents p {
+        font-size: 8px;
+    }
+
+    .totalOrderPrice {
+        font-size: 9px;
+    }
+
+    .orderCard .item .header .itemContents div span {
+        font-size: 9px;
+    }
+
+    .orderCard .orderTotal p:nth-child(1) {
+        font-size: 11px;
+    }
+
+    .orderCard .orderTotal p:nth-child(2) {
+        font-size: 12px;
+    }
+
+    form article label {
+        font-size: 10px;
+    }
+
+    .orderCard .item .header {
+        gap: 9px;
+    }
+
+    .submit {
+        font-size: 10px;
+    }
+}
+
+@media screen AND (max-width: 464px) {
+    .container .main-content {
+        width: 65%;
+    }
+
+    .main-content .card .textContainer p:nth-child(1) {
+        font-size: 13px;
+    }
+
+    .main-content .card .textContainer p:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .main-content .card .textContainer p:nth-child(3) {
+        font-size: 14px;
+    }
+
+    .main-content .card .figure .cartButton {
+        font-size: 10px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+    }
+
+    section .heading :is(h1:nth-child(1), h1:nth-child(2)) {
+        font-size: 15px;
+    }
+
+    .CO {
+        font-size: 10px;
+        font-weight: 600;
+    }
+}
+
+@media screen AND (max-width: 400px) {
+    .sidebar-content .sidebar-card button {
+        font-size: 9px;
+        font-weight: 700;
+    }
+
+    .main-content .card .figure .cartButton {
+        width: 100px;
+        font-size: 7px;
+        font-weight: 700;
+        bottom: -8px;
+    }
+
+    .main-content .card .figure .cartButton.active {
+        width: 100px;
+        font-weight: 900;
+    }
+
+    .main-content .card .figure .cartButton img {
+        width: 15%;
+    }
+
+    .main-content .card .textContainer p:nth-child(1) {
+        font-size: 11px;
+    }
+
+    .main-content .card .textContainer p:nth-child(2) {
+        font-size: 13px;
+    }
+
+    .main-content .card .textContainer p:nth-child(3) {
+        font-size: 12px;
+    }
+
+    .main-content .card .textContainer {
+        margin-top: 17px;
+    }
+
+    .sidebar-content {
+        width: 122%;
+    }
+}
+
+
+@media screen AND (max-width: 358px) {
+    section .heading :is(h1:nth-child(1), h1:nth-child(2)) {
+        font-size: 13px;
+    }
+
+    .sidebar-content .sidebar-card p:nth-child(2) {
+        font-size: 9px;
+        font-weight: normal;
+    }
+
+    .sidebar-content .sidebar-card :is(p:nth-child(3), p:nth-child(4)) {
+        font-size: 9px;
+    }
+
+    .sidebar-content .sidebar-card .total {
+        font-size: 10px;
+    }
+
+    .sidebar-content .sidebar-card button {
+        font-weight: 400;
+        font-size: 8px;
+    }
+
+    .CO {
+        font-size: 9px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .main-content .card .textContainer p:nth-child(1) {
+        font-size: 9px;
+    }
+
+    .main-content .card .textContainer p:nth-child(2) {
+        font-size: 11px;
+    }
+
+    .main-content .card .textContainer p:nth-child(3) {
+        font-size: 10px;
+    }
+}
+
+
+@media screen AND (max-width: 316px) {
+    section .heading :is(h1:nth-child(1), h1:nth-child(2)) {
+        font-size: 10px;
+    }
+
+    .main-content .card .figure .cartButton {
+        width: 80px;
+        font-size: 7px;
+        font-weight: 500;
+        bottom: -4px;
+    }
+
+    .main-content .card .figure .cartButton img {
+        display: none;
+    }
+
+    .main-content .card .figure .cartButton.active {
+        width: 80px;
+        font-weight: 900;
+    }
+
+    .main-content .card .figure .cartButton.active img {
+        display: flex;
+    }
+
+    .main-content .card .textContainer p:nth-child(1) {
+        font-size: 8px;
+    }
+
+    .main-content .card .textContainer p:nth-child(2) {
+        font-size: 10px;
+    }
+
+    .main-content .card .textContainer p:nth-child(3) {
+        font-size: 9px;
+    }
+
+    .main-content .card .textContainer {
+        margin-top: 10px;
+    }
+}
+
+@media screen AND (max-width: 311px) {
+    .sidebar-content .sidebar-card p:nth-child(2) {
+        font-size: 8px;
+        font-weight: 300;
+    }
+
+    .sidebar-content .sidebar-card :is(p:nth-child(3), p:nth-child(4)) {
+        font-size: 8px;
+        font-weight: 300;
+    }
+
+    .sidebar-content .sidebar-card p:nth-child(5){
+        font-size: 7px;
+    }
+
+    .sidebar-content .sidebar-card button {
+        font-weight: 300;
+        font-size: 7px;
+    }
+
+    .sidebar-content .sidebar-card .total {
+        font-size: 7px;
+    }
+
+    .CO {
+        font-size: 8px;
+        font-weight: 300;
+        padding: 4px;
+    }
 }

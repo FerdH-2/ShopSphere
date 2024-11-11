@@ -196,7 +196,7 @@ function renderCart() {
       <img src="${res.image}" alt="${res.name}" class="side-img">
       <p class="side-name">Item name: ${res.name}</p>
       <p class="side-name">Item price: $${res.price}</p>
-      <p class="side-name">Item quantity: ${res.quantity}</p>
+      <p class="side-name side-quan">Item quantity: ${res.quantity}</p>
       <hr class="hr">
       <p class="total">Total: $${(res.price * res.quantity).toFixed(2)}</p>
       <button> Remove ${res.name} </button>
@@ -250,7 +250,6 @@ function renderCart() {
           </div>
         `
         items.append(orderItem)
-        console.log(items)
       })
     })
   }
